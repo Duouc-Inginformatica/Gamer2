@@ -40,7 +40,7 @@ check_login();
 				<div class="row">
 					<div class="col-md-12">
 
-						</br></br><h2 class="page-title">RESUMEN</h2>
+						</br></br><h2 class="page-title">RESUMEN GENERAL</h2>
 
 						<div class="row">
 							<div class="col-md-12">
