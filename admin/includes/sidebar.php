@@ -21,8 +21,8 @@
 				<li class="ts-label">Avanzado</li>
 				<li><a href="#"><i class="fa fa-desktop"></i> Crear perfiles</a>
 					<ul>
-						<li><a href="reg_cliente.php"><i class="fa fa-user"></i>Registro de CLIENTES</a></li>
-						<li><a href="registration.php"><i class="fa fa-user"></i>Registro de ADMINISTRADORES</a></li>
+						<li><a href="reg_admin.php"><i class="fa fa-user"></i>Registro de ADMIN</a></li>
+						<li><a href="registration.php"><i class="fa fa-user"></i>Registro de Cliente</a></li>
 					</ul>
 
 			

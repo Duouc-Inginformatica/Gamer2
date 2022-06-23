@@ -40,7 +40,7 @@ check_login();
 				<div class="row">
 					<div class="col-md-12">
 
-						</br></br><h2 class="page-title">Consola de Inicio</h2>
+						</br></br><h2 class="page-title">RESUMEN</h2>
 
 						<div class="row">
 							<div class="col-md-12">
@@ -108,6 +108,13 @@ $stmt2->close();
 								</div>
 							</div>
 						</div>
+
+						<div class="row">
+					<div class="col-md-12">
+
+						</br></br><h2 class="page-title">HOTEL VERANUM SANTIAGO</h2>
+
+						</br></br><h2 class="page-title">HOTEL VERANUM VALPARAISO</h2>
 
 
 
