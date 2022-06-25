@@ -13,7 +13,12 @@
 						<li><a href="manage-rooms.php">Administrar Cuartos</a></li>
 					</ul>
 				</li>
-				<li><a href="inventario-santiago.php"><i class="fa fa-dashboard"></i>Sistema de inventario</a></li>
+				<li><a href="#"><i class="fa fa-desktop"></i>Santiago</a>
+					<ul>
+					<li><a href="inventario-santiago.php"><i class="fa fa-dashboard"></i>Sistema de inventario</a></li>
+					<li><a href="registration.php"><i class="fa fa-user"></i>Registro de Cliente Santiago</a></li>
+					</ul>
+				</li>
 				<!-- FIN HOTEL SANTIAGO -->
 				<!-- HOTEL Valparaiso -->
 				<li class="ts-label">Hotel Veranum VALPARAISO</li>
@@ -23,14 +28,18 @@
 						<li><a href="manage-rooms-valparaiso.php">Administrar Cuartos</a></li>
 					</ul>
 				</li>
-				<li><a href="inventario-valparaiso.php"><i class="fa fa-dashboard"></i>Sistema de inventario</a></li>
+				<li><a href="#"><i class="fa fa-desktop"></i>Valparaiso</a>
+					<ul>
+					<li><a href="inventario-valparaiso.php"><i class="fa fa-dashboard"></i>Sistema de inventario</a></li>
+					<li><a href="registration_valparaiso.php"><i class="fa fa-user"></i>Registro de Cliente Valparaiso</a></li>
+					</ul>
+				</li>
 				<!-- FIN HOTEL VALPARAISO -->
 
 				<li class="ts-label">Opciones especiales</li>
 				<li><a href="#"><i class="fa fa-desktop"></i> Crear perfiles</a>
 					<ul>
 						<li><a href="reg_admin.php"><i class="fa fa-user"></i>Registro de ADMIN</a></li>
-						<li><a href="registration.php"><i class="fa fa-user"></i>Registro de Cliente</a></li>
 					</ul>
 				</li>
 				<li><a href="#"><i class="fa fa-files-o"></i> Convenios</a>

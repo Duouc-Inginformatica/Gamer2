@@ -40,7 +40,7 @@ check_login();
 				<div class="row">
 					<div class="col-md-12">
 
-						</br></br><h2 class="page-title">Veranum santiago</h2>
+						</br></br><h2 class="page-title">HOTEL VERANUM SANTIAGO 🇨🇱</h2>
 
 						<div class="row">
 							<div class="col-md-12">
@@ -49,21 +49,19 @@ check_login();
 										<div class="panel panel-default">
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
-
 <?php
-$result ="SELECT count(*) FROM registration ";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($count);
-$stmt->fetch();
-$stmt->close();
+$result3 ="SELECT count(*) FROM rooms ";
+$stmt1 = $mysqli->prepare($result3);
+$stmt1->execute();
+$stmt1->bind_result($count10);
+$stmt1->fetch();
+$stmt1->close();
 ?>
-
-													<div class="stat-panel-number h1 "><?php echo $count;?></div>
-													<div class="stat-panel-title text-uppercase"> Clientes Santiago</div>
+						<div class="stat-panel-number h1 "><?php echo $count10;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
 												</div>
 											</div>
-											<a href="manage-students.php" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -71,34 +69,26 @@ $stmt->close();
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
 <?php
-$result1 ="SELECT count(*) FROM rooms ";
-$stmt1 = $mysqli->prepare($result1);
+$result4 ="SELECT count(*) FROM registration ";
+$stmt1 = $mysqli->prepare($result4);
 $stmt1->execute();
-$stmt1->bind_result($count1);
+$stmt1->bind_result($count11);
 $stmt1->fetch();
 $stmt1->close();
 ?>
-													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
-													<div class="stat-panel-title text-uppercase">Total de Cuartos en santiago </div>
+													<div class="stat-panel-number h1 "><?php echo $count11;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Clientes </div>
 												</div>
 											</div>
-											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="registration.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-								</div>
+						
+									</div>
 							</div>
 						</div>
-
-
-
-
-
 					</div>
 				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<!-- Loading Scripts -->
 	<script src="js/jquery.min.js"></script>

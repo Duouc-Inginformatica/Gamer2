@@ -52,33 +52,6 @@ check_login();
 
 <?php
 // sumar dos tabla de la base de datos registration y registration_valp
-$result ="SELECT count(*) FROM registration";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($count20);
-$stmt->fetch();
-$stmt->close();
-$result40 ="SELECT count(*) FROM registration_valp";
-$stmt = $mysqli->prepare($result40);
-$stmt->execute();
-$stmt->bind_result($count40);
-$stmt->fetch();
-$stmt->close();
-$count100 = $count20 + $count40;
-?>
-
-													<div class="stat-panel-number h1 "><?php echo $count100;?></div>
-													<div class="stat-panel-title text-uppercase"> Clientes Totales</div>
-												</div>
-											</div>
-											<a href="#" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="panel panel-default">
-											<div class="panel-body bk-success text-light">
-												<div class="stat-panel text-center">
-<?php
 $result65 ="SELECT count(*) FROM rooms";
 $stmt = $mysqli->prepare($result65);
 $stmt->execute();
@@ -93,11 +66,38 @@ $stmt->fetch();
 $stmt->close();
 $count49 = $count35 + $count48;
 ?>
+
 													<div class="stat-panel-number h1 "><?php echo $count49;?></div>
-													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
+													<div class="stat-panel-title text-uppercase"> Habitaciones Totales</div>
 												</div>
 											</div>
-											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="#" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-success text-light">
+												<div class="stat-panel text-center">
+<?php
+$result ="SELECT count(*) FROM registration";
+$stmt = $mysqli->prepare($result);
+$stmt->execute();
+$stmt->bind_result($count20);
+$stmt->fetch();
+$stmt->close();
+$result40 ="SELECT count(*) FROM registration_valp";
+$stmt = $mysqli->prepare($result40);
+$stmt->execute();
+$stmt->bind_result($count40);
+$stmt->fetch();
+$stmt->close();
+$count100 = $count20 + $count40;
+?>
+													<div class="stat-panel-number h1 "><?php echo $count100;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Clientes </div>
+												</div>
+											</div>
+											<a href="" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -144,7 +144,7 @@ $stmt1->close();
 													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
 												</div>
 											</div>
-											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-students.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -193,7 +193,7 @@ $stmt1->close();
 													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
 												</div>
 											</div>
-											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-students_valparaiso.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
