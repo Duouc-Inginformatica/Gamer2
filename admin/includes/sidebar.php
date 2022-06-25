@@ -15,6 +15,16 @@
 				</li>
 				<li><a href="inventario-santiago.php"><i class="fa fa-dashboard"></i>Sistema de inventario</a></li>
 				<!-- FIN HOTEL SANTIAGO -->
+				<!-- HOTEL Valparaiso -->
+				<li class="ts-label">Hotel Veranum VALPARAISO</li>
+					<li><a href="#"><i class="fa fa-desktop"></i> Cuartos</a>
+					<ul>
+						<li><a href="create-room-valparaiso.php">Agregar un Cuarto</a></li>
+						<li><a href="manage-rooms-valparaiso.php">Administrar Cuartos</a></li>
+					</ul>
+				</li>
+				<li><a href="inventario-valparaiso.php"><i class="fa fa-dashboard"></i>Sistema de inventario</a></li>
+				<!-- FIN HOTEL VALPARAISO -->
 
 				<li class="ts-label">Opciones especiales</li>
 				<li><a href="#"><i class="fa fa-desktop"></i> Crear perfiles</a>
