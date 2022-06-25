@@ -9,7 +9,7 @@ if($_POST['submit'])
 $seater=$_POST['seater'];
 $roomno=$_POST['rmno'];
 $fees=$_POST['fee'];
-$sql="SELECT room_no FROM rooms where room_no=?";
+$sql="SELECT room_no FROM rooms_valp where room_no=?";
 $stmt1 = $mysqli->prepare($sql);
 $stmt1->bind_param('i',$roomno);
 $stmt1->execute();
@@ -17,11 +17,11 @@ $stmt1->store_result();
 $row_cnt=$stmt1->num_rows;;
 if($row_cnt>0)
 {
-echo"<script>alert('Room alreadt exist');</script>";
+echo"<script>alert('EsTE CUARTO YA FUE CREADO');</script>";
 }
 else
 {
-$query="insert into  rooms (seater,room_no,fees) values(?,?,?)";
+$query="insert into  rooms_valp (seater,room_no,fees) values(?,?,?)";
 $stmt = $mysqli->prepare($query);
 $rc=$stmt->bind_param('iii',$seater,$roomno,$fees);
 $stmt->execute();
@@ -38,7 +38,7 @@ echo"<script>alert('El cuarto se ha agregado correctamente');</script>";
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>Creacion de Habitacion</title>
+	<title>Creacion de Habitacion en Veranum Valparaiso</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>
@@ -60,7 +60,7 @@ echo"<script>alert('El cuarto se ha agregado correctamente');</script>";
 				<div class="row">
 					<div class="col-md-12">
 					
-						<h2 class="page-title">Agregar un Cuarto </h2>
+						<h2 class="page-title">Agregar un Cuarto en Veranum Valparaiso</h2>
 	
 						<div class="row">
 							<div class="col-md-12">

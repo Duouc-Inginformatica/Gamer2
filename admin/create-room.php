@@ -38,7 +38,7 @@ echo"<script>alert('El cuarto se ha agregado correctamente');</script>";
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>Creacion de habitacion</title>
+	<title>Creacion de habitacion Veranum Santiago</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>
@@ -60,7 +60,7 @@ echo"<script>alert('El cuarto se ha agregado correctamente');</script>";
 				<div class="row">
 					<div class="col-md-12">
 					
-						<h2 class="page-title">Agregar un Cuarto </h2>
+						<h2 class="page-title">Agregar un Cuarto Veranum Santiago </h2>
 	
 						<div class="row">
 							<div class="col-md-12">

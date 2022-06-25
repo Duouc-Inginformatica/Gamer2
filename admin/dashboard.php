@@ -182,7 +182,7 @@ $stmt1->close();
 											<div class="panel-body bk-primary text-light">
 												<div class="stat-panel text-center">
 <?php
-$result5 ="SELECT count(*) FROM rooms ";
+$result5 ="SELECT count(*) FROM rooms_valp ";
 $stmt1 = $mysqli->prepare($result5);
 $stmt1->execute();
 $stmt1->bind_result($count13);

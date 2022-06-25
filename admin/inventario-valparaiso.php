@@ -82,7 +82,7 @@ $stmt1->close();
 													<div class="stat-panel-title text-uppercase">Total de Cuartos en Valparaiso </div>
 												</div>
 											</div>
-											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-rooms_valparaiso.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 
