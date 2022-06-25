@@ -60,7 +60,7 @@ $stmt->close();
 ?>
 
 													<div class="stat-panel-number h1 "><?php echo $count;?></div>
-													<div class="stat-panel-title text-uppercase"> Clientes</div>
+													<div class="stat-panel-title text-uppercase"> Clientes Santiago</div>
 												</div>
 											</div>
 											<a href="manage-students.php" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
@@ -79,32 +79,12 @@ $stmt1->fetch();
 $stmt1->close();
 ?>
 													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
-													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
+													<div class="stat-panel-title text-uppercase">Total de Cuartos en santiago </div>
 												</div>
 											</div>
 											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-3">
-										<div class="panel panel-default">
-											<div class="panel-body bk-info text-light">
-												<div class="stat-panel text-center">
-<?php
-$result2 ="SELECT count(*) FROM courses ";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>
-													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">Total de Convenio</div>
-												</div>
-											</div>
-											<a href="manage-courses.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-
 								</div>
 							</div>
 						</div>

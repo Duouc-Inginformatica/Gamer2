@@ -16,7 +16,7 @@ check_login();
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 
-	<title>Inventario Veranum santiago</title>
+	<title>Inventario Veranum Valparaiso</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
@@ -40,7 +40,7 @@ check_login();
 				<div class="row">
 					<div class="col-md-12">
 
-						</br></br><h2 class="page-title">Veranum santiago</h2>
+						</br></br><h2 class="page-title">Veranum Valparaiso</h2>
 
 						<div class="row">
 							<div class="col-md-12">
@@ -51,16 +51,16 @@ check_login();
 												<div class="stat-panel text-center">
 
 <?php
-$result ="SELECT count(*) FROM registration ";
+$result ="SELECT count(*) FROM registration_valp ";
 $stmt = $mysqli->prepare($result);
 $stmt->execute();
-$stmt->bind_result($count);
+$stmt->bind_result($count3);
 $stmt->fetch();
 $stmt->close();
 ?>
 
-													<div class="stat-panel-number h1 "><?php echo $count;?></div>
-													<div class="stat-panel-title text-uppercase"> Clientes</div>
+													<div class="stat-panel-number h1 "><?php echo $count3;?></div>
+													<div class="stat-panel-title text-uppercase"> Clientes Valparaiso</div>
 												</div>
 											</div>
 											<a href="manage-students.php" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
@@ -71,47 +71,20 @@ $stmt->close();
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
 <?php
-$result1 ="SELECT count(*) FROM rooms ";
+$result1 ="SELECT count(*) FROM rooms_valp ";
 $stmt1 = $mysqli->prepare($result1);
 $stmt1->execute();
-$stmt1->bind_result($count1);
+$stmt1->bind_result($count4);
 $stmt1->fetch();
 $stmt1->close();
 ?>
-													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
-													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
+													<div class="stat-panel-number h1 "><?php echo $count4;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Cuartos en Valparaiso </div>
 												</div>
 											</div>
 											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-									<div class="col-md-3">
-										<div class="panel panel-default">
-											<div class="panel-body bk-info text-light">
-												<div class="stat-panel text-center">
-<?php
-$result2 ="SELECT count(*) FROM courses ";
-$stmt2 = $mysqli->prepare($result2);
-$stmt2->execute();
-$stmt2->bind_result($count2);
-$stmt2->fetch();
-$stmt2->close();
-?>
-													<div class="stat-panel-number h1 "><?php echo $count2;?></div>
-													<div class="stat-panel-title text-uppercase">Total de Convenio</div>
-												</div>
-											</div>
-											<a href="manage-courses.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-
-
-
 
 					</div>
 				</div>
