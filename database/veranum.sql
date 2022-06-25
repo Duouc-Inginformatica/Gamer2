@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-12-2019 a las 15:05:55
--- Versión del servidor: 10.1.36-MariaDB
--- Versión de PHP: 7.2.10
+-- Tiempo de generación: 25-06-2022 a las 20:33:34
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,7 +32,7 @@ CREATE TABLE `admin` (
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(300) NOT NULL,
-  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `reg_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `updation_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -54,8 +53,15 @@ CREATE TABLE `adminlog` (
   `id` int(11) NOT NULL,
   `adminid` int(11) NOT NULL,
   `ip` varbinary(16) NOT NULL,
-  `logintime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `logintime` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `adminlog`
+--
+
+INSERT INTO `adminlog` (`id`, `adminid`, `ip`, `logintime`) VALUES
+(1, 1, 0x0138, '2022-06-23 06:20:15');
 
 -- --------------------------------------------------------
 
@@ -68,7 +74,7 @@ CREATE TABLE `courses` (
   `course_code` varchar(255) NOT NULL,
   `course_sn` varchar(255) NOT NULL,
   `course_fn` varchar(255) NOT NULL,
-  `posting_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `posting_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -76,8 +82,8 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `course_code`, `course_sn`, `course_fn`, `posting_date`) VALUES
-(1, 'PRS2145321', 'PRS32', 'CLINICA ANDES', '2022-4-13 19:53:56'),
-(8, '002V', '002V', 'INGENIERIA DE SOFTWARE', '2022-4-13 19:53:56');
+(1, 'PRS2145321', 'PRS32', 'CLINICA ANDES', '2022-04-13 19:53:56'),
+(8, '002V', '002V', 'INGENIERIA DE SOFTWARE', '2022-04-13 19:53:56');
 
 -- --------------------------------------------------------
 
@@ -113,7 +119,7 @@ CREATE TABLE `registration` (
   `pmntCity` varchar(500) NOT NULL,
   `pmnatetState` varchar(500) NOT NULL,
   `pmntPincode` int(11) NOT NULL,
-  `postingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `postingDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `updationDate` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -121,8 +127,48 @@ CREATE TABLE `registration` (
 -- Volcado de datos para la tabla `registration`
 --
 
--- INSERT INTO `registration` (`id`, `roomno`, `seater`, `feespm`, `foodstatus`, `stayfrom`, `duration`, `course`, `regno`, `firstName`, `middleName`, `lastName`, `gender`, `contactno`, `emailid`, `egycontactno`, `guardianName`, `guardianRelation`, `guardianContactno`, `corresAddress`, `corresCIty`, `corresState`, `corresPincode`, `pmntAddress`, `pmntCity`, `pmnatetState`, `pmntPincode`, `postingDate`, `updationDate`) VALUES
--- -- --------------------------------------------------------
+INSERT INTO `registration` (`id`, `roomno`, `seater`, `feespm`, `foodstatus`, `stayfrom`, `duration`, `course`, `regno`, `firstName`, `middleName`, `lastName`, `gender`, `contactno`, `emailid`, `egycontactno`, `guardianName`, `guardianRelation`, `guardianContactno`, `corresAddress`, `corresCIty`, `corresState`, `corresPincode`, `pmntAddress`, `pmntCity`, `pmnatetState`, `pmntPincode`, `postingDate`, `updationDate`) VALUES
+(13, 99, 0, 3500000, 1, '2022-06-23', 10, 'CLINICA ANDES', 123659897, 'antonio ', 'peralta', 'asomar', 'others', 895456464, 'ejemplo@duouc.cl', 48449494, 'holis', 'meme', 9649461354, 'sñdfjsjkfhkdsfhjijfgyhx', 'fdgdgdfgdfg', 'Metropolitana', 12345, 'sñdfjsjkfhkdsfhjijfgyhx', 'fdgdgdfgdfg', 'Metropolitana', 12345, '2022-06-23 06:22:21', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `registration_valp`
+--
+
+CREATE TABLE `registration_valp` (
+  `id` int(11) NOT NULL,
+  `roomno` int(11) NOT NULL,
+  `seater` int(11) NOT NULL,
+  `feespm` int(11) NOT NULL,
+  `foodstatus` int(11) NOT NULL,
+  `stayfrom` date NOT NULL,
+  `duration` int(11) NOT NULL,
+  `course` varchar(500) NOT NULL,
+  `regno` int(11) NOT NULL,
+  `firstName` varchar(500) NOT NULL,
+  `middleName` varchar(500) NOT NULL,
+  `lastName` varchar(500) NOT NULL,
+  `gender` varchar(250) NOT NULL,
+  `contactno` bigint(11) NOT NULL,
+  `emailid` varchar(500) NOT NULL,
+  `egycontactno` bigint(11) NOT NULL,
+  `guardianName` varchar(500) NOT NULL,
+  `guardianRelation` varchar(500) NOT NULL,
+  `guardianContactno` bigint(11) NOT NULL,
+  `corresAddress` varchar(500) NOT NULL,
+  `corresCIty` varchar(500) NOT NULL,
+  `corresState` varchar(500) NOT NULL,
+  `corresPincode` int(11) NOT NULL,
+  `pmntAddress` varchar(500) NOT NULL,
+  `pmntCity` varchar(500) NOT NULL,
+  `pmnatetState` varchar(500) NOT NULL,
+  `pmntPincode` int(11) NOT NULL,
+  `postingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updationDate` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `rooms`
@@ -133,7 +179,7 @@ CREATE TABLE `rooms` (
   `seater` varchar(255) NOT NULL,
   `room_no` int(11) NOT NULL,
   `fees` int(11) NOT NULL,
-  `posting_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `posting_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -143,6 +189,29 @@ CREATE TABLE `rooms` (
 INSERT INTO `rooms` (`id`, `seater`, `room_no`, `fees`, `posting_date`) VALUES
 (11, 'SUIT PRESIDENCIAL', 99, 3500000, '2022-12-13 20:40:20'),
 (12, 'SUIT SIMPLE', 14, 1200000, '2022-12-13 20:45:20');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rooms_valp`
+--
+
+CREATE TABLE `rooms_valp` (
+  `id` int(11) NOT NULL,
+  `seater` varchar(255) NOT NULL,
+  `room_no` int(11) NOT NULL,
+  `fees` int(11) NOT NULL,
+  `posting_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `rooms_valp`
+--
+
+INSERT INTO `rooms_valp` (`id`, `seater`, `room_no`, `fees`, `posting_date`) VALUES
+(11, 'SUIT PRESIDENCIAL', 99, 99999, '2022-12-13 23:40:20'),
+(12, 'SUIT SIMPLE', 14, 1200000, '2022-12-13 23:45:20'),
+(21, '2', 56, 695867, '2022-06-25 18:20:23');
 
 -- --------------------------------------------------------
 
@@ -190,7 +259,7 @@ CREATE TABLE `userlog` (
   `userIp` varbinary(16) NOT NULL,
   `city` varchar(255) NOT NULL,
   `country` varchar(255) NOT NULL,
-  `loginTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `loginTime` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -199,7 +268,7 @@ CREATE TABLE `userlog` (
 
 INSERT INTO `userlog` (`id`, `userId`, `userEmail`, `userIp`, `city`, `country`, `loginTime`) VALUES
 (7, 22, 'seba.munozo@duocuc.cl', 0x3a3a31, '', '', '2022-12-13 17:42:38'),
-(17, 22, 'hola@cw.com', 0x3a3a31, '', '', '2023-12-13 22:52:22');
+(17, 23, 'prueba@gmail.com', 0x3a3a32, 'santiago', 'santiago', '2023-12-13 22:52:22');
 
 -- --------------------------------------------------------
 
@@ -217,7 +286,7 @@ CREATE TABLE `userregistration` (
   `contactNo` bigint(20) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `regDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `updationDate` varchar(45) NOT NULL,
   `passUdateDate` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -227,7 +296,8 @@ CREATE TABLE `userregistration` (
 --
 
 INSERT INTO `userregistration` (`id`, `regNo`, `firstName`, `middleName`, `lastName`, `gender`, `contactNo`, `email`, `password`, `regDate`, `updationDate`, `passUdateDate`) VALUES
-(23, '1234567890', 'Sebastian', '', 'munoz', 'male', 1234567890, 'sebastian26481@gmail.com', '1', '2022-12-13 21:54:14', '', '');
+(23, '1234567890', 'Sebastian', '', 'munoz', 'male', 1234567890, 'sebastian26481@gmail.com', '1', '2022-12-13 21:54:14', '', ''),
+(24, '123659897', 'antonio ', 'peralta', 'asomar', 'others', 895456464, 'ejemplo@duouc.cl', '895456464', '2022-06-23 06:22:21', '', '');
 
 --
 -- Índices para tablas volcadas
@@ -252,9 +322,21 @@ ALTER TABLE `registration`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `registration_valp`
+--
+ALTER TABLE `registration_valp`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `rooms`
 --
 ALTER TABLE `rooms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `rooms_valp`
+--
+ALTER TABLE `rooms_valp`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -295,13 +377,25 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT de la tabla `registration`
 --
 ALTER TABLE `registration`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT de la tabla `registration_valp`
+--
+ALTER TABLE `registration_valp`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT de la tabla `rooms_valp`
+--
+ALTER TABLE `rooms_valp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `states`
@@ -319,7 +413,7 @@ ALTER TABLE `userlog`
 -- AUTO_INCREMENT de la tabla `userregistration`
 --
 ALTER TABLE `userregistration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
