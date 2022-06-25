@@ -28,7 +28,7 @@ echo"<script>alert('Usuario registrado correctamente');</script>";
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>Registrar usuario nuevo</title>
+	<title>Registrar usuario nuevo ADMINISTRADOR</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>

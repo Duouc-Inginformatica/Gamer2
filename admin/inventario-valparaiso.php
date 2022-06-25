@@ -63,7 +63,7 @@ $stmt->close();
 													<div class="stat-panel-title text-uppercase"> Clientes Valparaiso</div>
 												</div>
 											</div>
-											<a href="manage-students.php" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
+											<a href="manage-students_valparaiso.php" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">

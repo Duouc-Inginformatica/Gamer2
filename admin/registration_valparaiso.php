@@ -32,7 +32,7 @@ $paddress=$_POST['paddress'];
 $pcity=$_POST['pcity'];
 $pstate=$_POST['pstate'];
 $ppincode=$_POST['ppincode'];
-$query="insert into  registration(roomno,seater,feespm,foodstatus,stayfrom,duration,course,regno,firstName,middleName,lastName,gender,contactno,emailid,egycontactno,guardianName,guardianRelation,guardianContactno,corresAddress,corresCIty,corresState,corresPincode,pmntAddress,pmntCity,pmnatetState,pmntPincode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+$query="insert into  registration_valp(roomno,seater,feespm,foodstatus,stayfrom,duration,course,regno,firstName,middleName,lastName,gender,contactno,emailid,egycontactno,guardianName,guardianRelation,guardianContactno,corresAddress,corresCIty,corresState,corresPincode,pmntAddress,pmntCity,pmnatetState,pmntPincode) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $stmt = $mysqli->prepare($query);
 $rc=$stmt->bind_param('iiiisisissssisississsisssi',$roomno,$seater,$feespm,$foodstatus,$stayfrom,$duration,$course,$regno,$fname,$mname,$lname,$gender,$contactno,$emailid,$emcntno,$gurname,$gurrelation,$gurcntno,$caddress,$ccity,$cstate,$cpincode,$paddress,$pcity,$pstate,$ppincode);
 $stmt->execute();
@@ -56,7 +56,7 @@ echo"<script>alert('Registro de Cliente Satisfactorio');</script>";
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
-	<title>Hoteles Veranum</title>
+	<title>Hoteles Veranum Valparaiso</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>
@@ -103,7 +103,7 @@ $('#fpm').val(data);
 				<div class="row">
 					<div class="col-md-12">
 					
-						<h2 class="page-title">Formulario de Registro HOTEL SANTIAGO </h2>
+						<h2 class="page-title">Formulario de Registro HOTEL VALPARAISO </h2>
 
 						<div class="row">
 							<div class="col-md-12">
@@ -433,7 +433,7 @@ while($row=$res->fetch_object())
 function checkAvailability() {
 $("#loaderIcon").show();
 jQuery.ajax({
-url: "check_availability.php",
+url: "check_availability_valp.php",
 data:'roomno='+$("#room").val(),
 type: "POST",
 success:function(data){
