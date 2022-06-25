@@ -51,19 +51,27 @@ check_login();
 												<div class="stat-panel text-center">
 
 <?php
-$result ="SELECT count(*) FROM registration ";
+// sumar dos tabla de la base de datos registration y registration_valp
+$result ="SELECT count(*) FROM registration";
 $stmt = $mysqli->prepare($result);
 $stmt->execute();
-$stmt->bind_result($count);
+$stmt->bind_result($count20);
 $stmt->fetch();
 $stmt->close();
+$result40 ="SELECT count(*) FROM registration_valp";
+$stmt = $mysqli->prepare($result40);
+$stmt->execute();
+$stmt->bind_result($count40);
+$stmt->fetch();
+$stmt->close();
+$count100 = $count20 + $count40;
 ?>
 
-													<div class="stat-panel-number h1 "><?php echo $count;?></div>
-													<div class="stat-panel-title text-uppercase"> Clientes</div>
+													<div class="stat-panel-number h1 "><?php echo $count100;?></div>
+													<div class="stat-panel-title text-uppercase"> Clientes Totales</div>
 												</div>
 											</div>
-											<a href="manage-students.php" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
+											<a href="#" class="block-anchor panel-footer">Mas Información <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -71,18 +79,25 @@ $stmt->close();
 											<div class="panel-body bk-success text-light">
 												<div class="stat-panel text-center">
 <?php
-$result1 ="SELECT count(*) FROM rooms ";
-$stmt1 = $mysqli->prepare($result1);
-$stmt1->execute();
-$stmt1->bind_result($count1);
-$stmt1->fetch();
-$stmt1->close();
+$result65 ="SELECT count(*) FROM rooms";
+$stmt = $mysqli->prepare($result65);
+$stmt->execute();
+$stmt->bind_result($count35);
+$stmt->fetch();
+$stmt->close();
+$result90 ="SELECT count(*) FROM rooms_valp";
+$stmt = $mysqli->prepare($result90);
+$stmt->execute();
+$stmt->bind_result($count48);
+$stmt->fetch();
+$stmt->close();
+$count49 = $count35 + $count48;
 ?>
-													<div class="stat-panel-number h1 "><?php echo $count1;?></div>
+													<div class="stat-panel-number h1 "><?php echo $count49;?></div>
 													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
 												</div>
 											</div>
-											<a href="manage-rooms.php" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
 									<div class="col-md-3">
@@ -108,13 +123,99 @@ $stmt2->close();
 								</div>
 							</div>
 						</div>
+						</br></br><h2 class="page-title">HOTEL VERANUM SANTIAGO 🇨🇱</h2>
 
 						<div class="row">
-					<div class="col-md-12">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-primary text-light">
+												<div class="stat-panel text-center">
+<?php
+$result3 ="SELECT count(*) FROM rooms ";
+$stmt1 = $mysqli->prepare($result3);
+$stmt1->execute();
+$stmt1->bind_result($count10);
+$stmt1->fetch();
+$stmt1->close();
+?>
+						<div class="stat-panel-number h1 "><?php echo $count10;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
+												</div>
+											</div>
+											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-success text-light">
+												<div class="stat-panel text-center">
+<?php
+$result4 ="SELECT count(*) FROM registration ";
+$stmt1 = $mysqli->prepare($result4);
+$stmt1->execute();
+$stmt1->bind_result($count11);
+$stmt1->fetch();
+$stmt1->close();
+?>
+													<div class="stat-panel-number h1 "><?php echo $count11;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Clientes </div>
+												</div>
+											</div>
+											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+						
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+						</br></br><h2 class="page-title">HOTEL VERANUM VALPARAISO 🇨🇱</h2>
 
-						</br></br><h2 class="page-title">HOTEL VERANUM SANTIAGO</h2>
-
-						</br></br><h2 class="page-title">HOTEL VERANUM VALPARAISO</h2>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-primary text-light">
+												<div class="stat-panel text-center">
+<?php
+$result5 ="SELECT count(*) FROM rooms ";
+$stmt1 = $mysqli->prepare($result5);
+$stmt1->execute();
+$stmt1->bind_result($count13);
+$stmt1->fetch();
+$stmt1->close();
+?>
+						<div class="stat-panel-number h1 "><?php echo $count13;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Cuartos </div>
+												</div>
+											</div>
+											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="panel panel-default">
+											<div class="panel-body bk-success text-light">
+												<div class="stat-panel text-center">
+<?php
+$result6 ="SELECT count(*) FROM registration_valp ";
+$stmt1 = $mysqli->prepare($result6);
+$stmt1->execute();
+$stmt1->bind_result($count12);
+$stmt1->fetch();
+$stmt1->close();
+?>
+													<div class="stat-panel-number h1 "><?php echo $count12;?></div>
+													<div class="stat-panel-title text-uppercase">Total de Clientes </div>
+												</div>
+											</div>
+											<a href="#" class="block-anchor panel-footer text-center">Ver Todos &nbsp; <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+				
 
 
 
