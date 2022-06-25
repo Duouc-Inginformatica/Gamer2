@@ -45,17 +45,17 @@ if(isset($_GET['del']))
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						</br></br><h2 class="page-title">Administrar Cursos</h2>
+						</br></br><h2 class="page-title">Administrar Convenios</h2>
 						<div class="panel panel-default">
-							<div class="panel-heading">Detalle de Todos los Cursos</div>
+							<div class="panel-heading">Detalle de Todos los Convenios</div>
 							<div class="panel-body">
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 											<th>Serie.</th>
-											<th>Código del Curso</th>
-											<th>Nombre Corto del Curso</th>
-											<th>Nombre Completo del Curso</th>
+											<th>Código del Convenio</th>
+											<th>Nombre Corto del Convenio</th>
+											<th>Nombre Completo del Convenio</th>
 											<th>Fecha del Registro </th>
 											<th>Acción</th>
 										</tr>
@@ -63,9 +63,9 @@ if(isset($_GET['del']))
 									<tfoot>
 										<tr>
 											<th>Serie.</th>
-											<th>Código del Curso</th>
-											<th>Nombre Corto del Curso</th>
-											<th>Nombre Completo del Curso</th>
+											<th>Código del Convenio</th>
+											<th>Nombre Corto del Convenio</th>
+											<th>Nombre Completo del Convenio</th>
 											<th>Fecha del Registro </th>
 											<th>Acción</th>									</tr>
 									</tfoot>
@@ -87,7 +87,7 @@ while($row=$res->fetch_object())
 <td><?php echo $row->course_fn;?></td>
 <td><?php echo $row->posting_date;?></td>
 <td><a href="edit-course.php?id=<?php echo $row->id;?>"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-<a href="manage-courses.php?del=<?php echo $row->id;?>" onclick="return confirm("En realidad desear eliminar el curso");"><i class="fa fa-close"></i></a></td>
+<a href="manage-courses.php?del=<?php echo $row->id;?>" onclick="return confirm("En realidad desear eliminar el Convenio");"><i class="fa fa-close"></i></a></td>
 										</tr>
 									<?php
 $cnt=$cnt+1;

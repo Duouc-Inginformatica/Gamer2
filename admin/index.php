@@ -11,6 +11,7 @@ $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (user
 				$stmt -> bind_result($username,$username,$password,$id);
 				$rs=$stmt->fetch();
 				$_SESSION['id']=$id;
+				$_SESSION['username']=$username;
 				$uip=$_SERVER['REMOTE_ADDR'];
 				$ldate=date('d/m/Y h:i:s', time());
 				if($rs)
@@ -20,6 +21,7 @@ $stmt=$mysqli->prepare("SELECT username,email,password,id FROM admin WHERE (user
    // $stmtins->bind_param('sH',$id,$uip);
     //$res=$stmtins->execute();
 					header("location:admin-profile.php");
+					header("include:header.php");
 				}
 
 				else

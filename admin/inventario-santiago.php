@@ -16,7 +16,7 @@ check_login();
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 
-	<title>Resumen de Inventario</title>
+	<title>Inventario Veranum santiago</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
@@ -40,7 +40,7 @@ check_login();
 				<div class="row">
 					<div class="col-md-12">
 
-						</br></br><h2 class="page-title">Sistema de inventario</h2>
+						</br></br><h2 class="page-title">Veranum santiago</h2>
 
 						<div class="row">
 							<div class="col-md-12">
